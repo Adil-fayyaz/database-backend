@@ -1,0 +1,12 @@
+[build]
+  base = "dashboard"
+  publish = "dashboard/dist"
+  command = "cd dashboard && npm run build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://database-backend-production-2f45.up.railway.app/api/:splat"
+  status = 200
+  force = true
+
+

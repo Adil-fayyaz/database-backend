@@ -1,0 +1,15 @@
+Database Infinity API:
+- URL: https://database-backend-production-2f45.up.railway.app
+- Health: https://database-backend-production-2f45.up.railway.app/health
+- API: https://database-backend-production-2f45.up.railway.app/api
+
+Dashboard:
+- Netlify → Deploy from GitHub
+- Build: cd dashboard && npm run build
+- Publish: dashboard/dist
+- Env: VITE_API_URL = https://database-backend-production-2f45.up.railway.app/api
+
+BlackCyber:
+- Repo: https://github.com/Adil-fayyaz/blackcyber
+- Deploy: Railway → Root directory: /server
+
