@@ -1,0 +1,51 @@
+========================================
+   COME INSTALLARE L'APK SUL TELEFONO
+========================================
+
+STEP 1: PREPARA IL TELEFONO
+---------------------------
+1. Vai su Impostazioni > Informazioni sul telefono
+2. Tocca 7 volte su "Numero build" per attivare le Opzioni sviluppatore
+3. Torna alle Impostazioni > Sistema > Opzioni sviluppatore
+4. Attiva "USB debugging"
+5. Collega il telefono al PC via USB
+
+STEP 2: AUTORIZZA IL PC
+-----------------------
+1. Sul telefono apparirà un messaggio "Allow USB debugging"
+2. Spunta "Always allow from this computer"
+3. Tocca "OK"
+
+STEP 3: INSTALLA L'APK
+----------------------
+1. Esegui il file: INSTALLA_APK_NUOVO.bat
+2. Lo script verificherà che il telefono sia collegato
+3. Segui le istruzioni a schermo
+
+ALTERNATIVA: INSTALLAZIONE MANUALE
+----------------------------------
+Se preferisci, puoi anche:
+1. Copia BLACK_CYBER_NUOVO.apk sul telefono
+2. Apri il file sul telefono
+3. Autorizza l'installazione da "Origini sconosciute" se richiesto
+4. Tocca "Installa"
+
+========================================
+SUPPORTO
+========================================
+Se hai problemi:
+- Verifica che USB debugging sia attivo
+- Collega e scollega il cavo USB
+- Riavvia sia il telefono che il PC
+
+
+
+
+
+
+
+
+
+
+
+

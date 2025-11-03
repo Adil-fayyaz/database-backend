@@ -1,0 +1,166 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🔍 MONITORAGGIO ATTIVO - COSA PUOI VEDERE!                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🌐 DASHBOARD APERTA NEL BROWSER!
+
+La pagina http://localhost:3000/monitor.html è stata aperta.
+
+Guardala ora - vedrai:
+
+
+════════════════════════════════════════════════════════════════════
+
+📊 STATISTICHE IN TEMPO REALE:
+
+✅ Richieste HTTP - Tutte le richieste al server
+✅ Messaggi Inviati - Contatore totale messaggi
+✅ File Caricati - Upload file
+✅ Registrazioni - Nuovi utenti
+✅ Login - Accessi utenti
+✅ Utenti Unici - Numero persone diverse
+✅ IP Unici - Da dove si collegano
+
+
+════════════════════════════════════════════════════════════════════
+
+📋 LOG IN TEMPO REALE:
+
+Ogni attività viene registrata:
+
+👤 REGISTRAZIONE:
+   - Chi si registra
+   - Quando
+   - Da che IP
+
+🔐 LOGIN:
+   - Chi fa login
+   - Quando
+   - Su che dispositivo
+
+💬 MESSAGGI:
+   - Chi invia messaggi
+   - Contenuto (primi 50 caratteri)
+   - In quale chat (privata/gruppo)
+   - Tipo (testo/media)
+
+📎 FILE:
+   - Nome del file
+   - Tipo
+   - Dimensione
+   - Chi l'ha caricato
+
+
+════════════════════════════════════════════════════════════════════
+
+🔍 FILTRI DISPONIBILI:
+
+Puoi filtrare i log per tipo:
+- Tutti (mostra tutto)
+- HTTP (richieste al server)
+- Registrazioni
+- Login
+- Messaggi (solo messaggi testuali)
+- Upload (solo file)
+- Socket (eventi real-time)
+
+
+════════════════════════════════════════════════════════════════════
+
+📱 COSA FA LA DASHBOARD:
+
+1. AUTO-AGGIORNAMENTO ogni 5 secondi
+   (vedi i nuovi messaggi in tempo reale!)
+
+2. COLORI DIVERSI per tipo di evento:
+   - Verde = Registrazioni
+   - Blu = Login
+   - Giallo = Messaggi
+   - Rosso = Upload file
+   - Viola = Socket/WebSocket
+
+3. TIMESTAMP preciso (data e ora)
+
+4. INFORMAZIONI DETTAGLIATE per ogni evento
+
+
+════════════════════════════════════════════════════════════════════
+
+🧪 TEST VELOCE:
+
+1. ✅ Dashboard aperta nel browser
+
+2. 📱 Apri l'app Black Cyber sul telefono
+
+3. 💬 Invia un messaggio di test
+
+4. 👀 GUARDA la dashboard - vedrai apparire:
+   - Un nuovo log "message_sent"
+   - Chi ha mandato il messaggio
+   - Il contenuto
+   - L'ora esatta
+
+
+════════════════════════════════════════════════════════════════════
+
+📊 ESEMPIO DI COSA VEDI:
+
+💬 Messaggio da Mario: "Ciao a tutti..."
+   [message_sent] - 27/10/2025 04:52:15
+
+👤 Marco si è registrato
+   [user_registration] - 27/10/2025 04:50:12
+
+🔐 Luca ha fatto login
+   [user_login] - 27/10/2025 04:48:30
+
+📎 Mario ha caricato: immagine.jpg (1.2 MB)
+   [file_upload] - 27/10/2025 04:45:00
+
+
+════════════════════════════════════════════════════════════════════
+
+🔄 RICARICA MANUALE:
+
+Clicca il bottone verde in basso a destra:
+🔄 "Aggiorna"
+
+Per vedere gli ultimi eventi immediatamente!
+
+
+════════════════════════════════════════════════════════════════════
+
+📂 DOVE SONO SALVATI I LOG:
+
+File: logs/activity.json
+
+Contiene TUTTI i log storici (ultimi 10,000 eventi)
+
+
+════════════════════════════════════════════════════════════════════
+
+✅ ORA GUARDA IL BROWSER!
+
+La dashboard è aperta e mostra tutto in tempo reale!
+
+Ogni volta che qualcuno:
+- Si registra
+- Fa login
+- Manda messaggi
+- Carica file
+
+LO VEDRAI SUBITO nella dashboard! 🎯
+
+
+
+
+
+
+
+
+
+
+
+
+
+

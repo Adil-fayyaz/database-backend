@@ -1,13 +1,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Database = require('../database');
+const db = require('../database');
 
 const router = express.Router();
-const db = new Database();
-
-// Connect to database
-db.init();
 
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET || 'private_server_secret_key', {

@@ -1,0 +1,183 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           🔍 COSA PUOI VEDERE E MONITORARE                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📊 DASHBOARD APERTA: http://localhost:3000/monitor.html
+
+
+════════════════════════════════════════════════════════════════════
+
+📈 STATISTICHE IN ALTO (carte con numeri):
+
+1. RICHIESTE HTTP
+   Quante richieste totali al server
+   
+2. MESSAGGI INVIATI
+   Contatore totale messaggi mandati
+   
+3. FILE CARICATI
+   Numero totale upload
+
+4. REGISTRAZIONI
+   Quante persone si sono registrate
+
+5. LOGIN
+   Quanti accessi ci sono stati
+
+6. UTENTI UNICI
+   Quante persone diverse usano l'app
+
+7. IP UNICI
+   Da quante rete diverse si collegano
+
+
+════════════════════════════════════════════════════════════════════
+
+📋 LOG DETTAGLIATI (lista in basso):
+
+Per ogni attività vedi:
+
+✅ CHI ha fatto l'azione (nome utente)
+✅ QUANDO (timestamp preciso)
+✅ COSA ha fatto (azione specifica)
+✅ DOVE (in quale chat/profilo)
+✅ COME (tipo di contenuto)
+
+Esempi reali che vedrai:
+
+
+🔵 REGISTRAZIONE:
+   "👤 Mario si è registrato"
+   [user_registration] - 27/10/2025 04:52:15
+
+
+🔵 LOGIN:
+   "🔐 Luca ha fatto login"
+   [user_login] - 27/10/2025 04:52:20
+
+
+🟡 MESSAGGIO:
+   "💬 Mario in group: Ciao a tutti!"
+   [message_sent] - 27/10/2025 04:52:25
+   
+   "💬 Anna in privata: Ti scrivo in privato"
+   [message_sent] - 27/10/2025 04:52:30
+
+
+🟡 MESSAGGIO VOICE:
+   "💬 Marco in group: [Media]"
+   [message_sent] - 27/10/2025 04:53:00
+
+
+🔴 UPLOAD FILE:
+   "📎 Sara ha caricato: foto.jpg (1.5 MB)"
+   [file_upload] - 27/10/2025 04:53:15
+
+
+🔵 RICHIESTA HTTP:
+   "🌐 GET /api/users - Status: 200"
+   [http_request] - 27/10/2025 04:53:20
+
+
+════════════════════════════════════════════════════════════════════
+
+🎨 COLORI DIVERSI:
+
+Carte e log sono colorati per tipo:
+
+🟢 Verde = Registrazione nuova persona
+🔵 Blu = Login/Accesso
+🟡 Giallo = Messaggi testuali
+🔴 Rosso = Upload file
+🟣 Viola = Eventi Socket/WebSocket
+⚪ Bianco = Richieste HTTP
+
+
+════════════════════════════════════════════════════════════════════
+
+🔍 FILTRI IN ALTO (pulsanti):
+
+Clicca per vedere solo certi tipi:
+
+[Tutti] - Mostra tutto
+[HTTP] - Solo richieste al server
+[Registrazioni] - Solo nuovi utenti
+[Login] - Solo accessi
+[Messaggi] - Solo testo/chat
+[Upload] - Solo file
+[Socket] - Eventi real-time
+
+
+════════════════════════════════════════════════════════════════════
+
+⚡ AGGIORNAMENTO AUTOMATICO:
+
+La dashboard si aggiorna OGNI 5 SECONDI automaticamente!
+
+Vedi i nuovi eventi in tempo reale senza fare nulla!
+
+
+════════════════════════════════════════════════════════════════════
+
+📱 TEST VELOCE:
+
+1. Dashboard aperta nel browser ✅
+
+2. Apri app sul telefono
+
+3. Registra un nuovo utente
+   → VEDRAI il log apparire nella dashboard!
+
+4. Manda un messaggio
+   → VEDRAI il messaggio in tempo reale!
+
+5. Carica una foto
+   → VEDRAI l'upload!
+
+TUTTO IN DIRETTA! 🎯
+
+
+════════════════════════════════════════════════════════════════════
+
+🔐 SICUREZZA E PRIVACY:
+
+I messaggi sono mostrati PARZIALMENTE (primi 50 caratteri)
+
+Per privacy e performance non vengono salvati messaggi completi lunghi
+
+Vedi sempre:
+- Chi ha mandato
+- Quando
+- In quale chat
+- Che tipo (testo/audio/immagine)
+
+
+════════════════════════════════════════════════════════════════════
+
+✅ TUTTO PRONTO!
+
+Ora puoi monitorare:
+✅ Quante persone usano l'app
+✅ Chi sono (nomi utenti)
+✅ Quando si connettono
+✅ Che messaggi mandano
+✅ Che file caricano
+✅ D Tutte le attività in tempo reale!
+
+🔍 Dashboard: http://localhost:3000/monitor.html
+
+LA VEDRAI ORA NEL BROWSER! 📊
+
+
+
+
+
+
+
+
+
+
+
+
+
+

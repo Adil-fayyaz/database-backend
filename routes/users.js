@@ -1,8 +1,7 @@
 const express = require('express');
-const Database = require('../database');
+const db = require('../database');
 
 const router = express.Router();
-const db = new Database();
 
 // Simple auth middleware
 const authenticate = (req, res, next) => {
@@ -22,6 +21,7 @@ const authenticate = (req, res, next) => {
 
 router.get('/', authenticate, (req, res) => {
   try {
+    console.log('DEBUG: Getting all users, db.isConnected():', db.isConnected());
     const users = db.getAllUsers();
     res.status(200).json({
       success: true,
@@ -29,9 +29,11 @@ router.get('/', authenticate, (req, res) => {
       data: users,
     });
   } catch (error) {
+    console.error('ERROR in users route:', error.message, error.stack);
     res.status(500).json({
       success: false,
       message: 'Errore nel recupero utenti',
+      error: error.message
     });
   }
 });

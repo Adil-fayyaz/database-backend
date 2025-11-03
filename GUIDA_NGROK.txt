@@ -1,0 +1,93 @@
+╔══════════════════════════════════════════════════════════╗
+║     🌐 GUIDA RAPIDA - NGROK                              ║
+╚══════════════════════════════════════════════════════════╝
+
+📋 PASSO 1: AVVIA SERVER + NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opzione A (AUTOMATICO - CONSIGLIATO):
+   → Doppio click su: TUTTO_IN_UNO.bat
+   → Questo avvia server + ngrok automaticamente
+
+Opzione B (MANUALE):
+   1. Doppio click su: START_SERVER_SIMPLE.bat
+   2. Apri un nuovo terminale e digita: ngrok http 3000
+   3. Aspetta che ngrok mostri l'URL
+
+
+📋 PASSO 2: OTTIENI URL NGROK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opzione A (AUTOMATICO):
+   → Doppio click su: CONFIGURA_NGROK.bat
+   → Lo script trova automaticamente l'URL e configura l'app
+
+Opzione B (MANUALE):
+   1. Apri nel browser: http://localhost:4040
+   2. Copia l'URL "Forwarding" tipo: https://xxxx.ngrok-free.app
+   3. Esegui: SET_NGROK_URL.bat
+   4. Incolla l'URL quando richiesto
+
+
+📋 PASSO 3: COMPILA APK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   → Doppio click su: COMPILA_APK.bat
+   → Attendi la compilazione (può richiedere alcuni minuti)
+
+
+📋 PASSO 4: INSTALLA APK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   → Collega il telefono via USB
+   → Attiva "Debug USB" nel telefono
+   → Doppio click su: INSTALLA_APK.bat
+
+
+✅ VERIFICA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Server deve essere attivo su porta 3000
+2. Ngrok deve essere attivo (finestra minimizzata o terminale)
+3. URL ngrok deve essere configurato nell'app
+4. APK deve essere compilato con il nuovo URL
+5. APK deve essere installato sul telefono
+
+
+⚠️  RISOLUZIONE PROBLEMI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Ngrok non si avvia"
+   → Verifica che ngrok sia installato: ngrok version
+   → Installa ngrok: https://ngrok.com/download
+   → Potresti dover autenticarti: ngrok authtoken TUA_CHIAVE
+
+❌ "URL ngrok non drago"
+   → Vai su http://localhost:4040
+   → Oppure esegui: CONFIGURA_NGROK.bat
+
+❌ "App non si connette"
+   → Verifica che il server sia attivo: http://localhost:3000/api/health
+   → Verifica che ngrok sia attivo: http://localhost:4040
+   → Riconpila l'APK dopo aver configurato l'URL
+
+❌ "Errore nella registrazione"
+   → Verifica che il server funzioni: http://localhost:3000/api/auth/register
+   → Testa l'URL ngrok nel browser: https://TUO_URL_NGROK/api/health
+
+
+📁 FILE IMPORTANTI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- TUTTO_IN_UNO.bat - Avvia tutto automaticamente
+- CONFIGURA_NGROK.bat - Configura URL ngrok nell'app
+- COMPILA_APK.bat - Compila l'APK
+- INSTALLA_APK.bat - Installa l'APK sul telefono
+
+
+✅ DOPO LA CONFIGURAZIONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L'app funzionerà da OVUNQUE, non solo sulla stessa WiFi!
+L'URL ngrok cambia se chiudi e riapri ngrok (tranne con account premium).
+

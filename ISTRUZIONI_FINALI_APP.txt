@@ -1,0 +1,74 @@
+╔══════════════════════════════════════════════════════════╗
+║     ✅ APK INSTALLATO - ISTRUZIONI FINALI                ║
+╚══════════════════════════════════════════════════════════╝
+
+📱 APRI L'APP SUL TELEFONO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Cerca l'app "White Devel" sul telefono
+2. Apri l'app
+
+
+📝 REGISTRAZIONE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quando si apre la schermata di registrazione:
+
+1. Campo "Nome": inserisci → adil
+2. Campo "Paese": inserisci → paki
+3. Premi il pulsante "Registrati"
+
+✅ L'app si aprirà automaticamente!
+
+
+🌐 SERVER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Il server è attivo su:
+- URL: http://192.168.1.2:3000/api
+- Porta: 3000
+
+L'app è configurata per connettersi automaticamente.
+
+
+🛡️ FUNZIONALITÀ DISPONIBILI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Chat di gruppo
+✅ Chat private
+✅ Messaggi vocali
+✅ Condivisione file
+✅ Chiamate
+✅ Dashboard sicurezza (icona 🛡️ nell'header)
+   - Monitora tentativi di intrusione
+   - Alert in tempo reale
+   - Statistiche di sicurezza
+
+
+🔒 SICUREZZA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Il sistema di sicurezza è attivo e ti avviserà se:
+- Qualcuno tenta di accedere senza autorizzazione
+- Ci sono tentativi di intrusione
+- Attività sospette vengono rilevate
+
+Per vedere gli alert:
+1. Apri l'app
+2. Tocca l'icona 🛡️ (scudo) nell'header
+3. Vedi tutti gli alert di sicurezza
+
+
+⚠️  IMPORTANTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- PC e telefono devono essere sulla STESSA rete WiFi
+- Il server deve essere attivo (START_SERVER_SIMPLE.bat)
+- Se cambi rete WiFi, potrebbe essere necessario aggiornare l'IP
+
+
+✅ TUTTO PRONTO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apri l'app "White Devel" sul telefono e inizia a usarla! 🎉
+

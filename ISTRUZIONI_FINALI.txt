@@ -1,0 +1,37 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     ✅ RISOLTO ERRORE REGISTRAZIONE                              ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚠️ PROBLEMA:
+Il server Railway era per un altro progetto. Ho rimosso.
+
+✅ SOLUZIONE TEMPORANEA (FUNZIONA ORA):
+- App configurata per server locale (192.168.1.2:3000)
+- Server backend deve essere AVVIATO sul PC
+- Telefono e PC devono essere sulla stessa WiFi
+
+📋 PER USARE L'APP ORA:
+1账号Assicura che il server sia avviato:
+   > cd blackcyber-backend
+   > node server.js
+   
+2. Assicurati che PC e telefono siano sulla stessa WiFi
+   
+3. L'app dovrebbe funzionare e registrazione dovrebbe andare!
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 PER FAR FUNZIONARE CON PC SPENTO (RAILWAY):
+
+Devi deployare il backend blackcyber su Railway:
+- Vedi file: DEPLOY_RAILWAY_RAPIDO.md
+- Servono 10-15 minuti per setup completo
+
+═══════════════════════════════════════════════════════════════════
+
+📱 APK IN COMPILAZIONE:
+Sto compilando nuovo APK con server locale.
+Quando finisce, installalo e prova registrazione!
+
+═══════════════════════════════════════════════════════════════════
+

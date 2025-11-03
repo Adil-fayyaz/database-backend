@@ -1,0 +1,48 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🔧 SOLUZIONE ERRORE REGISTRAZIONE - 2 OPZIONI               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚠️ PROBLEMA:
+Il server Railway che hai configurato è per un altro progetto!
+Non ha le route /api/auth/register per blackcyber.
+
+═══════════════════════════════════════════════════════════════════
+
+✅ SOLUZIONE 1: NGROK (VELOCE - 5 minuti)
+   Funziona SOLO quando il PC è acceso
+
+   1. Scarica ngrok: https://ngrok.com/download
+   2. Estrai ngrok.exe e mettilo in una cartella in PATH
+   3. Avvia server locale:
+      > cd blackcyber-backend
+      > node server.js
+   4. In nuovo terminale:
+      > ngrok http 3000
+   5. Copia URL HTTPS (es: https://xxxx.ngrok.io)
+   6. Aggiorna backend_config.dart con questo URL
+   7. Ricompila APK
+   8. Installa sul telefono
+
+═══════════════════════════════════════════════════════════════════
+
+✅ SOLUZIONE 2: RAILWAY (PERMANENTE)
+   Funziona ANCHE con PC spento!
+
+   Vedi file: DEPLOY_RAILWAY_RAPIDO.md
+
+   Passi rapidi:
+   1. Crea repo GitHub con codice blackcyber-backend
+   2. Vai su railway.app → New Project → Deploy from GitHub
+   3. Aggiungi variabili ambiente (MONGODB_URI, JWT_SECRET)
+   4. Ottieni URL Railway
+   5. Aggiorna backend_config.dart
+   6. Ricompila e installa APK
+
+═══════════════════════════════════════════════════════════════════
+
+📋 RACCOMANDATO:
+- Per test veloce: NGROK (soluzione 1)
+- Per produzione: RAILWAY (soluzione 2)
+
+═══════════════════════════════════════════════════════════════════
+

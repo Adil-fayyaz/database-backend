@@ -2,10 +2,9 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const Database = require('../database');
+const db = require('../database');
 
 const router = express.Router();
-const db = new Database();
 
 // Create uploads directory
 if (!fs.existsSync('uploads')) {

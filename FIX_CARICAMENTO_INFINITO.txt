@@ -1,0 +1,67 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║              🔧 FIX CARICAMENTO INFINITO - URGENTE! 🔧                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+PROBLEMA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ App rimane su schermata di caricamento per mezzora
+❌ Non entra mai nell'app
+❌ Troppo lento / bloccato
+
+
+CAUSE POSSIBILI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Server backend NON attivo
+2. App non riesce a connettersi al server
+3. Timeout nelle richieste API
+4. Errore nella registrazione/login
+
+
+SOLUZIONI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SOLUZIONE #1: AVVIA IL SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IL SERVER DEVE ESSERE SEMPRE ATTIVO!
+
+Esegui:
+   START_SERVER_SIMPLE.bat
+
+Oppure:
+   cd blackcyber-backend
+   node server.js
+
+Aspetta fino a vedere:
+   "🚀 Server listening on port 3000"
+
+
+SOLUZIONE #2: DISINSTALLA E REINSTALLA APK PULITO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+L'app potrebbe avere dati corrotti.
+
+Esegui:
+   adb uninstall com.example.blackcyber
+   adb install "blackcyber - Copia - Copia - Copia\build\app\outputs\flutter-apk\app-release.apk"
+
+
+SOLUZIONE #3: CANCELLA DATI APP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Cancella cache e dati:
+   
+   adb shell pm clear com.example.blackcyber
+
+Poi riapri l'app.
+
+
+SOLUZIONE #4: AUMENTA TIMEOUT E RIMUOVI BLOCCHI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Modifico il codice per:
+   - Timeout più lunghi
+   - Nessun blocco su caricamento
+   - Retry automatico
+   - Skip se server non risponde
+
+
+APPLICANDO FIX ADESSO...
+

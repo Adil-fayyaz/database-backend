@@ -1,0 +1,52 @@
+╔══════════════════════════════════════════════════════════╗
+║     ✅ REGISTRAZIONE CONFIGURATA                         ║
+╚══════════════════════════════════════════════════════════╝
+
+📋 COSA È STATO FATTO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Backend aggiornato per accettare il campo "country"
+✅ Registrazione salva nome e paese correttamente
+✅ Utenti registrati sono automaticamente approvati (isApproved = true)
+✅ App si apre direttamente dopo registrazione (non va su pending approval)
+✅ Test registrazione funzionante
+
+
+🎯 REGISTRAZIONE CON NOME "adil" E PAESE "paki":
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quando inserisci:
+- Nome: adil
+- Paese: paki
+
+Il sistema:
+1. ✅ Registra l'utente sul server
+2. ✅ Salva il paese "paki"
+3. ✅ Approva automaticamente l'utente
+4. ✅ Apre direttamente l'app (non mostra schermata "in attesa")
+
+
+📱 COME USARE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Avvia il server:
+   → Esegui: START_SERVER_SIMPLE.bat
+   → Oppure: cd blackcyber-backend && node server.js
+
+2. Installa l'APK:
+   → Esegui: INSTALLA_E_TESTA.bat
+   → Oppure: INSTALLA_APK.bat
+
+3. Apri l'app sul telefono:
+   → Inserisci nome: adil
+   → Inserisci paese: paki
+   → Premi Registrati
+   → L'app si aprirà automaticamente! 🎉
+
+
+✅ TUTTO PRONTO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L'utente "adil" con paese "paki" viene registrato automaticamente
+e può aprire l'app immediatamente senza aspettare approvazione.
+

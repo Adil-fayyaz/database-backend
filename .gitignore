@@ -1,17 +1,53 @@
+# Dependencies
 node_modules/
+
+# Environment files (contengono secrets!)
 .env
-.env.local
+.env.*
+!.env.example
+!env.*.template
+.jwt-secret.txt
+
+# Database e upload
 data/
 uploads/
-logs/
 *.db
+*.db-shm
+*.db-wal
+
+# Logs
+logs/
 *.log
+npm-debug.log*
+
+# Dashboard
 dashboard/.env
 dashboard/.env.local
 dashboard/dist/
+dashboard/node_modules/
+
+# Build artifacts
 blackcyber*/
 *.apk
 *.aab
 *.bin
 android/.gradle/
 build/
+dist/
+
+# Backup files
+*.backup
+*.bak
+database-backup.db
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*

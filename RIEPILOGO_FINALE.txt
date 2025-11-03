@@ -1,0 +1,77 @@
+╔══════════════════════════════════════════════════════════╗
+║     ✅ SETUP COMPLETO - WHITE DEVEL                      ║
+╚══════════════════════════════════════════════════════════╝
+
+📋 COSA È STATO FATTO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Backend configurato per funzionare SENZA MongoDB
+   - Storage in-memory per utenti e messaggi
+   - Funziona anche se MongoDB non è configurato
+   - Server su porta 3000, accessibile da rete locale
+
+✅ App Flutter rinominata in "White Devel"
+   - Nome cambiato da "Black Cyber" a "White Devel"
+   - Package: com.example.blackcyber
+   - Configurata per connettersi a http://192.168.1.2:3000/api
+
+✅ File di configurazione creati:
+   - AVVIA_TUTTO.bat - Avvia il server backend
+   - INSTALLA_APK.bat - Installa l'APK sul telefono
+   - START_SERVER_SIMPLE.bat - Avvia solo il server
+
+📱 COME USARE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  AVVIA IL SERVER:
+   - Doppio click su: START_SERVER_SIMPLE.bat
+   - Oppure: AVVIA_TUTTO.bat
+   - Il server sarà su: http://localhost:3000/api
+   - Accessibile da telefono su: http://192.168.1.2:3000/api
+
+2️⃣  INSTALLA L'APP SUL TELEFONO:
+   - Collega il telefono via USB
+   - Attiva "Debug USB" nel telefono
+   - Doppio click su: INSTALLA_APK.bat
+   - L'app "White Devel" sarà installata
+
+3️⃣  VERIFICA FUNZIONAMENTO:
+   - Apri l'app "White Devel" sul telefono
+   - Registrati con nome e Android ID
+   - L'app si connetterà automaticamente al server
+
+⚠️  IMPORTANTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- PC e telefono DEVONO essere sulla stessa rete WiFi
+- L'IP del PC deve essere 192.168.1.2 (verifica con ipconfig)
+- Se l'IP è diverso, modifica backend_config.dart nell'app Flutter
+- Il server usa storage in-memory: i dati si perdono se riavvii
+
+🔧 RISOLUZIONE PROBLEMI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Errore nella registrazione"
+   → Verifica che il server sia avviato (porta 3000)
+   → Controllaibilità che PC e telefono siano sulla stessa WiFi
+   → Verifica l'IP del PC con: ipconfig
+
+❌ "Impossibile connettersi al server"
+   → Modifica backend_config.dart con l'IP corretto del PC
+   → Riconpila l'APK: flutter build apk --release
+
+❌ "Server non si avvia"
+   → Installa Node.js: https://nodejs.org
+   → Installa dipendenze: cd blackcyber-backend && npm install
+
+📂 FILE PRINCIPALI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- blackcyber-backend/server.js - Server principale
+- blackcyber-backend/routes/auth.js - Registrazione/login
+- blackcyber-backend/models/UserMemory.js - Storage utenti
+- blackcyber-backend/models/MessageMemory.js - Storage messaggi
+- blackcyber - Copia - Copia - Copia/lib/services/backend_config.dart - Configurazione app
+
+✅ TUTTO PRONTO! 🚀
+

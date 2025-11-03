@@ -1,0 +1,55 @@
+========================================
+   RISOLUZIONE PROBLEMI SAMSUNG
+========================================
+
+Il telefono Samsung è collegato ma ADB non lo rileva.
+Segui questi passaggi:
+
+STEP 1: CAMBIA MODALITÀ USB SUL SAMSUNG
+----------------------------------------
+1. Quando colleghi il cavo USB, sul telefono Samsung
+   apparirà una notifica "Caricamento via USB"
+2. TOCCA la notifica
+3. Seleziona "File transfer" o "MTP" (MTP Transfer)
+4. NON lasciare su "Caricamento" o "Only charging"
+
+STEP 2: ATTIVA USB DEBUGGING
+-----------------------------
+1. Vai su: Impostazioni > Informazioni sul telefono
+2. Tocca 7 volte su "Numero build"
+3. Se appare un messaggio, tocca "OK"
+4. Torna indietro: Impostazioni > Sistema > Opzioni sviluppatore
+5. Attiva "Opzioni sviluppatore" (se non era attiva)
+6. Scorri e attiva "USB debugging"
+
+STEP 3: AUTORIZZA IL PC
+-----------------------
+1. Scollega e ricollega il cavo USB
+2. Sul telefono apparirà "Allow USB debugging?"
+3. Spunta "Always allow from this computer"
+4. Tocca "Allow" o "OK"
+
+STEP 4: RIPROVA
+---------------
+Dopo aver fatto questi passaggi, esegui di nuovo:
+INSTALLA_APK_NUOVO.bat
+
+========================================
+NOTA PER SAMSUNG
+========================================
+Su Samsung potresti dover installare:
+"Samsung USB Drivers" dal sito ufficiale Samsung
+
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
