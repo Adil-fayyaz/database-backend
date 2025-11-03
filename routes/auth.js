@@ -1,7 +1,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const db = require('../database');
+const db = process.env.DATABASE_URL 
+  ? require('../database-postgres')
+  : require('../database');
 
 const router = express.Router();
 
@@ -13,9 +15,9 @@ const generateToken = (id) => {
 
 router.post('/register', async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, phone, password } = req.body;
 
-    if (!name || !email || !password) {
+    if (!name || !phone || !password) {
       return res.status(400).json({
         success: false,
         message: 'Tutti i campi sono obbligatori',
@@ -30,7 +32,7 @@ router.post('/register', async (req, res) => {
     }
 
     // Check if user exists
-    const existingUser = db.getUserByEmail(email);
+    const existingUser = await db.getUserByPhone(phone);
     if (existingUser) {
       return res.status(400).json({
         success: false,
@@ -42,7 +44,7 @@ router.post('/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create user
-    const user = db.createUser(name, email, hashedPassword);
+    const user = await db.createUser(name, phone, hashedPassword);
 
     // Generate token
     const token = generateToken(user.id);
@@ -70,17 +72,17 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { phone, password } = req.body;
 
-    if (!email || !password) {
+    if (!phone || !password) {
       return res.status(400).json({
         success: false,
-        message: 'Email e password sono obbligatorie',
+        message: 'Phone e password sono obbligatori',
       });
     }
 
     // Get user from database
-    const user = db.getUserByEmail(email);
+    const user = await db.getUserByPhone(phone);
     if (!user) {
       return res.status(401).json({
         success: false,
@@ -102,14 +104,11 @@ router.post('/login', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      data: {
-        token,
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          isAdmin: user.isAdmin === 1,
-        },
+      token,
+      user: {
+        id: user.id,
+        name: user.name,
+        phone: user.phone,
       },
     });
   } catch (error) {
