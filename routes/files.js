@@ -54,7 +54,7 @@ router.get('/', authenticate, (req, res) => {
   }
 });
 
-router.post('/', authenticate, upload.single('file'), (req, res) => {
+router.post('/upload', authenticate, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({
@@ -63,22 +63,45 @@ router.post('/', authenticate, upload.single('file'), (req, res) => {
       });
     }
 
-    const fileId = db.createFile(
-      req.file.filename,
-      req.file.originalname,
-      `/uploads/${req.file.filename}`,
-      req.file.size,
-      req.file.mimetype,
-      req.userId
-    );
+    const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
 
-    const file = db.getAllFiles().find(f => f.id === fileId);
+    // Check if we're using PostgreSQL or SQLite
+    if (db.createFile.constructor.name === 'AsyncFunction') {
+      // PostgreSQL (async)
+      const file = await db.createFile(
+        req.userId,
+        req.file.filename,
+        `/uploads/${req.file.filename}`,
+        req.file.mimetype,
+        req.file.size
+      );
+      
+      res.status(201).json({
+        success: true,
+        url: fileUrl,
+        data: file,
+      });
+    } else {
+      // SQLite (sync)
+      const fileId = db.createFile(
+        req.file.filename,
+        req.file.originalname,
+        `/uploads/${req.file.filename}`,
+        req.file.size,
+        req.file.mimetype,
+        req.userId
+      );
 
-    res.status(201).json({
-      success: true,
-      data: file,
-    });
+      const file = db.getAllFiles().find(f => f.id === fileId);
+
+      res.status(201).json({
+        success: true,
+        url: fileUrl,
+        data: file,
+      });
+    }
   } catch (error) {
+    console.error('❌ Errore upload file:', error);
     res.status(500).json({
       success: false,
       message: 'Errore nel caricamento file',

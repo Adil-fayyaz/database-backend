@@ -272,11 +272,24 @@ class DatabaseManager {
 
   async getUserGroups(userId) {
     const result = await this.pool.query(
-      `SELECT g.* 
+      `SELECT g.*, COUNT(gm2.user_id) as members_count
        FROM groups g 
        JOIN group_members gm ON g.id = gm.group_id 
-       WHERE gm.user_id = $1`,
+       LEFT JOIN group_members gm2 ON g.id = gm2.group_id
+       WHERE gm.user_id = $1
+       GROUP BY g.id`,
       [userId]
+    );
+    return result.rows;
+  }
+
+  async getAllGroups() {
+    const result = await this.pool.query(
+      `SELECT g.*, COUNT(gm.user_id) as members_count
+       FROM groups g 
+       LEFT JOIN group_members gm ON g.id = gm.group_id
+       GROUP BY g.id
+       ORDER BY g.created_at DESC`
     );
     return result.rows;
   }
@@ -288,6 +301,16 @@ class DatabaseManager {
       [userId, filename, filepath, mimetype, size]
     );
     return result.rows[0];
+  }
+
+  async getAllFiles() {
+    const result = await this.pool.query('SELECT * FROM files ORDER BY uploaded_at DESC');
+    return result.rows;
+  }
+
+  async getFilesByUser(userId) {
+    const result = await this.pool.query('SELECT * FROM files WHERE user_id = $1 ORDER BY uploaded_at DESC', [userId]);
+    return result.rows;
   }
 
   // Status methods
