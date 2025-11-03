@@ -1,5 +1,7 @@
 const express = require('express');
-const db = require('../database');
+const db = process.env.DATABASE_URL 
+  ? require('../database-postgres')
+  : require('../database');
 
 const router = express.Router();
 

@@ -2,7 +2,9 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const db = require('../database');
+const db = process.env.DATABASE_URL 
+  ? require('../database-postgres')
+  : require('../database');
 
 const router = express.Router();
 
