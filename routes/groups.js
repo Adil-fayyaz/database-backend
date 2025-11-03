@@ -52,15 +52,16 @@ const upload = multer({
 });
 
 // Get all groups (for admin)
-router.get('/', authenticate, (req, res) => {
+router.get('/', authenticate, async (req, res) => {
   try {
-    const groups = db.getAllGroups();
+    const groups = await db.getAllGroups();
     res.status(200).json({
       success: true,
       count: groups.length,
       data: groups,
     });
   } catch (error) {
+    console.error('❌ Errore recupero gruppi:', error);
     res.status(500).json({
       success: false,
       message: 'Errore nel recupero gruppi',
@@ -69,15 +70,16 @@ router.get('/', authenticate, (req, res) => {
 });
 
 // Get user's groups
-router.get('/my-groups', authenticate, (req, res) => {
+router.get('/my', authenticate, async (req, res) => {
   try {
-    const groups = db.getUserGroups(req.userId);
+    const groups = await db.getUserGroups(req.userId);
     res.status(200).json({
       success: true,
       count: groups.length,
       data: groups,
     });
   } catch (error) {
+    console.error('❌ Errore recupero gruppi:', error);
     res.status(500).json({
       success: false,
       message: 'Errore nel recupero gruppi',
@@ -118,7 +120,7 @@ router.get('/:id', authenticate, (req, res) => {
 });
 
 // Create group
-router.post('/', authenticate, upload.single('avatar'), (req, res) => {
+router.post('/', authenticate, upload.single('avatar'), async (req, res) => {
   try {
     const { name, description } = req.body;
 
@@ -130,8 +132,8 @@ router.post('/', authenticate, upload.single('avatar'), (req, res) => {
     }
 
     const avatar = req.file ? `/uploads/groups/${req.file.filename}` : null;
-    const groupId = db.createGroup(name, description, avatar, req.userId);
-    const group = db.getGroupById(groupId);
+    const group = await db.createGroup(name, description, req.userId);
+    await db.addGroupMember(group.id, req.userId);
 
     // Emit to socket
     if (req.app.io) {
@@ -143,6 +145,7 @@ router.post('/', authenticate, upload.single('avatar'), (req, res) => {
       data: group,
     });
   } catch (error) {
+    console.error('❌ Errore creazione gruppo:', error);
     res.status(500).json({
       success: false,
       message: 'Errore nella creazione gruppo',
